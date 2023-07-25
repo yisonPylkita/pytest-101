@@ -21,7 +21,7 @@ def ensure_server_up(address: str):
     assert requests.get(f"http://{address}").status_code == 200
 
 
-def test_fruit_salad(env_fixture):
+def test_pytest_demo(env_fixture):
     address = env_fixture
 
     response = requests.get(f"http://{address}/param", params={"query": "demo"}).json()
